@@ -1,9 +1,31 @@
 package com.primary.instanthelp;
 
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.api.client.http.GenericUrl;
+import com.google.api.client.http.HttpRequest;
+import com.google.api.client.http.HttpResponse;
+import com.google.api.client.http.HttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -23,6 +45,8 @@ import android.provider.ContactsContract;
 
 public class UIElement extends Activity {
 
+
+	//static HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
 	private static final int PICK_CONTACT = 0;
 	Button buttonSend;
 	Button buttonBrowse;
@@ -30,10 +54,12 @@ public class UIElement extends Activity {
 	EditText sourceString;
 	EditText destinationString;
 	static String phoneNo;
+	@SuppressLint("NewApi")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_uielement);
+
 
 		buttonSend = (Button) findViewById(R.id.sendbutton);
 		buttonBrowse = (Button) findViewById(R.id.browsebutton);
@@ -57,7 +83,7 @@ public class UIElement extends Activity {
 					phoneNo = textPhoneNo.getText().toString();
 				String source = sourceString.getText().toString();
 				String destination = destinationString.getText().toString();
-				String sms = "$$$ Source: "+source+"\n"+"Destination:"+destination;
+				String sms = "$$$"+"\n"+"Source:"+source+"\n"+"Destination:"+destination;
 				try {
 					SmsManager smsManager = SmsManager.getDefault();
 					Toast.makeText(getApplicationContext(),
@@ -84,8 +110,8 @@ public class UIElement extends Activity {
 		switch (reqCode) {
 		case (PICK_CONTACT) :
 			if (resultCode == Activity.RESULT_OK){
-		        Cursor cursor =  getContentResolver().query(data.getData(), null, null, null, null);
-   
+				Cursor cursor =  getContentResolver().query(data.getData(), null, null, null, null);
+
 				while (cursor.moveToNext()) 
 				{           
 					String contactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
@@ -133,21 +159,5 @@ public class UIElement extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_uielement,
-					container, false);
-			return rootView;
-		}
-	}
 
 }

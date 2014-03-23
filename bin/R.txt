@@ -227,9 +227,9 @@ int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
 int drawable ic_launcher 0x7f020057
-int id Destination 0x7f05003e
-int id PhoneNumber 0x7f05003f
-int id Source 0x7f05003d
+int id Destination 0x7f05003f
+int id PhoneNumber 0x7f050040
+int id Source 0x7f05003e
 int id action_bar 0x7f05001c
 int id action_bar_activity_content 0x7f050015
 int id action_bar_container 0x7f05001b
@@ -241,11 +241,11 @@ int id action_context_bar 0x7f05001d
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
-int id action_settings 0x7f050042
+int id action_settings 0x7f050043
 int id activity_chooser_view_content 0x7f050025
 int id always 0x7f05000b
 int id beginning 0x7f050011
-int id browsebutton 0x7f050040
+int id browsebutton 0x7f050041
 int id checkbox 0x7f05002d
 int id collapseActionView 0x7f05000d
 int id container 0x7f05003c
@@ -264,6 +264,7 @@ int id ifRoom 0x7f05000a
 int id image 0x7f050027
 int id listMode 0x7f050001
 int id list_item 0x7f050029
+int id map 0x7f05003d
 int id middle 0x7f050012
 int id never 0x7f050009
 int id none 0x7f050010
@@ -281,7 +282,7 @@ int id search_mag_icon 0x7f050035
 int id search_plate 0x7f050036
 int id search_src_text 0x7f050037
 int id search_voice_btn 0x7f05003b
-int id sendbutton 0x7f050041
+int id sendbutton 0x7f050042
 int id shortcut 0x7f05002e
 int id showCustom 0x7f050007
 int id showHome 0x7f050004
@@ -319,8 +320,9 @@ int layout abc_popup_menu_item_layout 0x7f030014
 int layout abc_search_dropdown_item_icons_2line 0x7f030015
 int layout abc_search_view 0x7f030016
 int layout activity_uielement 0x7f030017
-int layout fragment_uielement 0x7f030018
-int layout support_simple_spinner_dropdown_item 0x7f030019
+int layout fragment_mapelement 0x7f030018
+int layout fragment_uielement 0x7f030019
+int layout support_simple_spinner_dropdown_item 0x7f03001a
 int menu uielement 0x7f0c0000
 int string Destination 0x7f0a000f
 int string Source 0x7f0a000e
