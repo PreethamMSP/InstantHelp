@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.primary.instanthelp.UIElement$PlaceholderFragment" >
+
+    <EditText
+        android:id="@+id/Source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Source" >
+     <requestFocus />
+    </EditText>    
+
+    <EditText
+        android:id="@+id/Destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Source"
+        android:layout_below="@+id/Source"
+        android:ems="10"
+        android:hint="@string/Destination" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/PhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Destination"
+        android:layout_below="@+id/Destination"
+        android:ems="10"
+        android:hint="@string/phoneNumber" />
+
+    <Button
+        android:id="@+id/browsebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/Destination"
+        android:layout_alignTop="@+id/PhoneNumber"
+        android:text="@string/browsebutton" />
+
+    <Button
+        android:id="@+id/sendbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/browsebutton"
+        android:layout_below="@+id/browsebutton"
+        android:text="@string/sendbutton" />
+
+</RelativeLayout>

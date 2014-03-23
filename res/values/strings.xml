@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Instanthelp</string>
+    <string name="Source">Enter source string</string>
+    <string name="Destination">Enter destination string</string>
+    <string name="phoneNumber">Select a phoneNumber</string>
+    <string name="sendbutton">Send</string>
+    <string name="browsebutton">Browse</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
